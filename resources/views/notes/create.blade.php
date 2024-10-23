@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>Create note</h1>
-    <form action="/note/store" method="note">
+    <form action="/notes" method="post">
+        @csrf
         <label for="title">Title:</label>
         <input type="text" name="title" id="">
 
@@ -15,6 +16,7 @@
         <textarea name="content" id="content"></textarea>
 
         <input type="submit" value="create">
+        
     </form>
 </body>
 </html>
