@@ -7,8 +7,9 @@ use App\Models\Note;
 
 class NoteController extends Controller
 {
-    public function index(){
-        $posts = Note::all();
-        return viwe('note.index', ['allNotes' => $notes]);
+    public function index()
+    {
+        $notes = Note::all();
+        return view('notes.index', ['allNotes' => $notes]);
     }
 }
